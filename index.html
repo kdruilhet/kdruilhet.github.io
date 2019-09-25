@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kaitlin's First Website</title>
+  <style>
+    body {
+        background: rgb(0, 0, 0);
+        color: rgb(45, 45, 45);
+        padding: 10px;
+        font-family: arial;
+    }
+    header {
+        font-size: 1.5em;
+        font-weight: bold;
+        font-family: "Ink Free";
+    }
+    #all-contents {
+        max-width: 800px;
+        margin: auto;
+    }
+
+    /* navigation menu */
+    nav {
+        background: rgb(255, 165, 0);
+        margin: 0 auto;
+        margin-bottom: 20px;
+        display: flex;
+        padding: 10px;
+        border-radius: 25px;
+    }
+    nav header {
+        display: flex;
+        align-items: center;
+        color: rgb(255, 255, 255);
+        flex: 1;
+    }
+    nav ul {
+        list-style-image: none;
+    }
+    nav li {
+        display: inline-block;
+        padding: 0 10px;
+    }
+    nav a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    /* main container area beneath menu */
+    main {
+        background: rgb(245, 238, 219);
+        display: flex;
+    }
+    .sidebar {
+        margin-right: 25px;
+        padding: 10px;
+    }
+    .sidebar img {
+        width: 200px;
+        border-radius: 10px;
+    }
+    .content {
+        flex: 1;
+        padding: 15px;
+    }
+    .interests header {
+        font-size: 1.25em;
+    }
+</style>
+</head>
+<body>
+    <div id="all-contents">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+        </nav>
+        
+        <main>
+            <div class="sidebar">
+                <img src="data:image/jpeg;base64,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">
+            </div>
+            
+            <div class="content">
+                <header>Kaitlin Druilhet</header>
+                <p>Student At WSM High School</p>
+                    <section class="Interests">
+                        <header>Interests</header>
+                        <ul>
+                            <li>Basketball</li>
+                            <li>Youtube</li>
+                            <li>Food</li>
+                        </ul>
+                    </section>
+                            
+            
+            </div>
+            
+        
+        </main>
+    </div>  
+</body>
+</html>
