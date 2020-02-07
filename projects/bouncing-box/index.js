@@ -50,25 +50,20 @@ function moveBoxToTwo(newPositionY) {
 
 box.css("top", newPositionY);
 
+
 }
 
 setInterval(updateAgain, 50);
 
 // TODO 2 - Variable declarations
 
-var positionX = 0;
-
-var points = 0;
-
-var speed = 10;
-
-var positionY = 0;
-
-var direction = 10;
-
-var boardHeight = jQuery(window).height();
-
-var ranNum = Math.random(0, boardWidth) * 100;
+    var positionX = 0;
+    var points = 0;
+    var speed = 10;
+    var positionY = 0;
+    var direction = 10;
+    var boardHeight = jQuery(window).height();
+    var ranNum = Math.random(0, boardWidth) * 100;
 
 /*
 
@@ -81,43 +76,23 @@ turn it around!
 */
 
 function update() {
-
-positionX = positionX + speed;
-
-moveBoxTo(positionX);
-
+    positionX = positionX + speed;
+    moveBoxTo(positionX);
 if (positionX > boardWidth){
-
-speed = -speed;
-
+    speed = -speed;
+}else if (positionX < 0){
+    speed = speed * -1;
 }
-
-else if (positionX < 0){
-
-speed = speed * -1;
-
-}
-
 }
 
 function updateAgain() {
-
-positionY = positionY + direction;
-
-moveBoxToTwo(positionY);
-
+    positionY = positionY + direction;
+    moveBoxToTwo(positionY);
 if (positionY > boardHeight){
-
-direction = -direction;
-
+    direction = -direction;
+}else if (positionY < 0){
+    direction = direction * -1;
 }
-
-else if (positionY < 0){
-
-direction = direction * -1;
-
-}
-
 }
 
 /*
@@ -131,15 +106,9 @@ the left side of the screen.
 */
 
 function handleBoxClick() {
-
-positionX = 0;
-
-points = points + 1;
-
-changeBoxText(points);
-
-speed = speed + 3;
-
+    positionX = 0;
+    points = points + 1;
+    changeBoxText(points);
+    speed = speed + 3;
 };
-
 })();
